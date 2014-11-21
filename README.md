@@ -16,6 +16,6 @@ You’ll need a couple things installed on your computer before you start:
 * [NodeJS](http://nodejs.org/)
 
 Once you have these, you can open a Terminal window. On OS X it looks something like this:
-![Terminal window on OS X](./README-files/Terminal-window.png)
+![Terminal window on OS X](README-files/Terminal-window.png)
 
 Type in `gem install jekyll` and hit enter. If you get a bunch of errors, it might mean you need to run the command with more privileges, like so: `sudo gem install jekyll`. Once that finishes, navigate to the Silence-Sounds folder (type `cd` and then drag the folder into the terminal window). Once you’re there it should say `NAME-OF-THE-FOLDER $` or something similar. Then, type in `jekyll serve`. It will tell you `Server address: ` and then something; copy the something (for me it’s `http://0.0.0.0:4000/`) into a browser address bar, and the website should be running! Then, when you make changes to the code, just reload the page to see the changes.
