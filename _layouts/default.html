@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include silence-title.html %} {% include main-nav.html %}
+
+    <main id="main" class="m-scene">
+        {{ content }}
+    </main>
+
+    <!-- {% include footer.html %} -->
+
+</body>
+<script type="text/javascript" src="../js/libs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/libs/tappy.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type='text/javascript'>//<![CDATA[
+document.write("<script async src='//HOST:3001/browser-sync-client.1.1.2.js'><\/script>".replace(/HOST/g, location.hostname));
+//]]></script>
+</html>

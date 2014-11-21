@@ -1,0 +1,14 @@
+# Site settings
+title: Silence Sounds
+email: info@silencesounds.ca
+description: > # this means to ignore newlines until "baseurl:"
+  Guelph’s portal for adventurous new sound events.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://silencesounds.ca" # the base hostname & protocol for your site
+twitter_username: silence_guelph
+github_username: 
+
+# Build settings
+markdown: kramdown
+
+exclude: [node_modules, Gruntfile.js, package.json]

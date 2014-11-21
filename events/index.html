@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="center">Concerts + Events</h1>
+
+  <ul class="event-list">
+    {% for post in site.posts %}
+      <li class="event" id="{{ post.title }}">
+        <h3 class="no-spacing">{{ post.title }}{% if post.note %}<span class="normal-size dark-grey"> [{{ post.note }}]</span>{% endif %}</h3>
+        <!-- <span class="small"><a href="{{ post.url }}" class="med-grey">permalink</a></span> -->
+        <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+
+        <p>{{ post.content }}</p>
+        <div class="small">[<a href="#{{ post.title }}" class="med-grey">permalink</a>]</div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <hr>
+  <p class="rss-subscribe">subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
+
+</div>
