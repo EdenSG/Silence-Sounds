@@ -22,6 +22,14 @@ module.exports = function(grunt) {
                     interupt: true,
                 },
             },
+            js: {
+                files: ['js/**'],
+                tasks: ['js'],
+                options: {
+                    spawn: false,
+                    interupt: true,
+                },
+            },
             // image: {
             //     files: ['build/images/*'],
             //     tasks: ['images'],
@@ -40,13 +48,13 @@ module.exports = function(grunt) {
             },
         },
 
-        // // JS //
-        // uglify: {
-        //     build: {
-        //         src: ['build/js/libs/*.js', 'build/js/*.js'],
-        //         dest: 'dist/js/main.min.js'
-        //     }
-        // },
+        // JS //
+        uglify: {
+            build: {
+                src: ['js/libs/*.js', '/js/*.js'],
+                dest: '_site/js/main.min.js'
+            }
+        },
 
         // CSS //
         autoprefixer: {
@@ -185,6 +193,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['styles', 'html']);
     grunt.registerTask('jekyll', ['shell']);
     grunt.registerTask('styles', ['cssmin', 'autoprefixer']);
+    grunt.registerTask('js', ['uglify']);
     // grunt.registerTask('images', ['newer:copy:main', 'newer:imageoptim:myTask', 'svgmin']);
     grunt.registerTask('html', ['htmlmin']);
     grunt.registerTask('serve', ['jekyll', 'browserSync:dev', 'watch']);
