@@ -8,28 +8,28 @@ module.exports = function(grunt) {
         watch: {
             jekyll: {
                 files: ['_includes/**', '_layouts/**', '_posts/**', '_sass/**'],
-                tasks: ['jekyll'],
+                tasks: ['jekyll', 'styles', 'js', 'html'],
                 options: {
                     spawn: false,
                     interupt: true,
                 },
             },
-            styles: {
-                files: ['_site/css/*.css'],
-                tasks: ['styles'],
-                options: {
-                    spawn: false,
-                    interupt: true,
-                },
-            },
-            js: {
-                files: ['js/**'],
-                tasks: ['js'],
-                options: {
-                    spawn: false,
-                    interupt: true,
-                },
-            },
+            // styles: {
+            //     files: ['_site/css/*.css'],
+            //     tasks: ['styles'],
+            //     options: {
+            //         spawn: false,
+            //         interupt: true,
+            //     },
+            // },
+            // js: {
+            //     files: ['js/**'],
+            //     tasks: ['js'],
+            //     options: {
+            //         spawn: false,
+            //         interupt: true,
+            //     },
+            // },
             // image: {
             //     files: ['build/images/*'],
             //     tasks: ['images'],
@@ -38,20 +38,20 @@ module.exports = function(grunt) {
             //         interupt: true,
             //     },
             // },
-            html: {
-                files: ['_site/*.html'],
-                tasks: ['html'],
-                options: {
-                    spawn: false,
-                    interupt: true,
-                },
-            },
+            // html: {
+            //     files: ['_site/*.html'],
+            //     tasks: ['html'],
+            //     options: {
+            //         spawn: false,
+            //         interupt: true,
+            //     },
+            // },
         },
 
         // JS //
         uglify: {
             build: {
-                src: ['js/libs/*.js', '/js/*.js'],
+                src: ['js/libs/jquery-2.1.1.min.js', 'js/libs/tappy.js', 'js/main.js'],
                 dest: '_site/js/main.min.js'
             }
         },
@@ -175,7 +175,7 @@ module.exports = function(grunt) {
 
     // Load the plugins
     grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-autoprefixer');
     // grunt.loadNpmTasks('grunt-uncss');
@@ -191,7 +191,7 @@ module.exports = function(grunt) {
 
     // Tasks
     grunt.registerTask('default', ['styles', 'html']);
-    grunt.registerTask('jekyll', ['shell']);
+    grunt.registerTask('jekyll', ['shell', 'styles', 'js', 'html']);
     grunt.registerTask('styles', ['cssmin', 'autoprefixer']);
     grunt.registerTask('js', ['uglify']);
     // grunt.registerTask('images', ['newer:copy:main', 'newer:imageoptim:myTask', 'svgmin']);
