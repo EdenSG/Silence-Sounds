@@ -6,14 +6,14 @@ module.exports = function(grunt) {
 
         // Watch //
         watch: {
-            // jekyll: {
-            //     files: ['_*/*'],
-            //     tasks: ['jekyll'],
-            //     options: {
-            //         spawn: false,
-            //         interupt: true,
-            //     },
-            // },
+            jekyll: {
+                files: ['_includes/**', '_layouts/**', '_posts/**', '_sass/**'],
+                tasks: ['jekyll'],
+                options: {
+                    spawn: false,
+                    interupt: true,
+                },
+            },
             styles: {
                 files: ['_site/css/*.css'],
                 tasks: ['styles'],
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 
         shell: {
             jekyll: {
-                command: "jekyll build --watch"
+                command: "jekyll build"
             }
         },
 
@@ -187,7 +187,7 @@ module.exports = function(grunt) {
     grunt.registerTask('styles', ['cssmin', 'autoprefixer']);
     // grunt.registerTask('images', ['newer:copy:main', 'newer:imageoptim:myTask', 'svgmin']);
     grunt.registerTask('html', ['htmlmin']);
-    grunt.registerTask('serve', ['browserSync:dev', 'watch']);
+    grunt.registerTask('serve', ['jekyll', 'browserSync:dev', 'watch']);
 
 
 };
