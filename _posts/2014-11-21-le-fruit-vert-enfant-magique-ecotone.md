@@ -5,6 +5,6 @@ note: 10$/pwyc
 ---
 silence (46 essex st. guelph)
 
--le fruit vert
--enfant magique
--ecotone
+- le fruit vert
+- enfant magique
+- ecotone
