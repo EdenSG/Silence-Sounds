@@ -11,4 +11,4 @@ github_username:
 # Build settings
 markdown: kramdown
 
-exclude: [node_modules, Gruntfile.js, package.json, README.md, README-files]
+exclude: ['node_modules', 'Gruntfile.js', 'package.json', 'README.md', 'README-files', 'js/*']
