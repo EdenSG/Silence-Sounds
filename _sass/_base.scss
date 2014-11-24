@@ -255,6 +255,11 @@ blockquote {
     &:hover > .line {
         box-shadow: 0 0 0 2px #000;
     }
+    @media (max-width: 30rem) {
+        &.close {
+            background: transparent;
+        }
+    }
     &:before {
         transform:scale(1);
         content: '';
@@ -267,6 +272,12 @@ blockquote {
         border-radius: 0 0 0 100%;
         transform-origin: top right;
         transition: all 0.4s cubic-bezier(.64,1.55,.55,.91);
+        @media (max-width: 30rem) {
+            display: none;
+        }
+    }
+    &.close:before {
+        background: #fff;
     }
     &:active:before {
         transform: scale(1.1);
@@ -277,8 +288,8 @@ blockquote {
     &:focus {
         outline: none;
     }
-    &.close:before {
-        background: #fff;
+    @media (max-width: 30rem) {
+        background: #fe0;
     }
 }
 .line:nth-child(1) {
