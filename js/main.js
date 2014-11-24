@@ -9,6 +9,6 @@ $(function() {
             $(this).removeClass('close').addClass('open');
             $('#main-nav').removeClass('shown');
             $('body').css('overflow', 'auto');
-        };
+        }
     });
-})
+});
