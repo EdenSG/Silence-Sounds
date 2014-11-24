@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body {
     font-family: Helvetica, Arial, "Droid Sans", sans-serif;
     font-size: 18px;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
@@ -26,9 +26,9 @@ body {
 
 
 
-@media (max-width: 50em), (max-height: 50em) {
+@media (max-width: 550px), (max-height: 550px) {
     html, body {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 
