@@ -22,16 +22,22 @@ body {
     text-align: center;
     h1 {
         font-weight: 900;
-        font-size: 12em;
+        font-size: 12rem;
         margin: 0;
         background: white;
-        @media (max-width: 40em) {
-            font-size: 8em;
+        // @media (max-width: 500px) {
+        //     font-size: 8rem;
+        // }
+        @media (max-width: 800px) {
+            font-size: 6.5rem;
+        }
+        @media (max-width: 600px) {
+            font-size: 4rem;
         }
         color: #000;
     }
     h3 {
-        padding: 3em;
+        padding: 3rem;
         background-color: #fe0;
         display: inline-block;
         font-weight: 900;
@@ -42,7 +48,7 @@ body {
         box-sizing: border-box;
         @media (max-width: 40em) {
             font-size: 1em;
-            padding: 0;
+            padding: 1em;
         }
     }
 }
@@ -52,20 +58,20 @@ body {
     display: block;
 }
 
-@media (max-width: 40em), (max-height: 40em) {
-    #silence-title h1 {
-        font-size: 7.5em;
-    }
-    #silence-title h3 {
-        font-size: 1.3em;
-        padding: 1em;
-    }
-}
-@media (max-width: 30em), (max-height: 30em) {
-    #silence-title h1 {
-        font-size: 5em;
-    }
-}
+// @media (max-width: 40rem), (max-height: 40rem) {
+//     #silence-title h1 {
+//         font-size: 7.5rem;
+//     }
+//     #silence-title h3 {
+//         font-size: 1.3rem;
+//         padding: 1rem;
+//     }
+// }
+// @media (max-width: 30rem), (max-height: 30rem) {
+//     #silence-title h1 {
+//         font-size: 5rem;
+//     }
+// }
 
 /**
  * Site footer
@@ -136,9 +142,9 @@ body {
  */
 
 main {
-    max-width: 40em;
-    margin: 1em auto;
-    padding: 1em;
+    max-width: 40rem;
+    margin: 1rem auto;
+    padding: 1rem;
     width: 80%;
 }
 
@@ -148,7 +154,7 @@ main {
  */
 .event-list {
     li.event {
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
         list-style: none;
         &:target > h3 {
             background: #fe0;
@@ -156,7 +162,7 @@ main {
         &:before {
             content: '-';
             position: absolute;
-            margin-left: -1.5em;
+            margin-left: -1.5rem;
         }
     }
 }
@@ -170,7 +176,7 @@ main {
 }
 
 .post-title {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     letter-spacing: -1px;
     line-height: 1;
 
@@ -183,19 +189,19 @@ main {
     margin-bottom: $spacing-unit;
 
     h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
     h3 {
-        font-size: 1.3em;
+        font-size: 1.3rem;
     }
 
     h4 {
-        font-size: 1.2em;
+        font-size: 1.2rem;
         color:#555;
     }
 }
