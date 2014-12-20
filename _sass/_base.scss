@@ -365,14 +365,14 @@ blockquote {
         transform: translate(0, 0) rotate(0);
     }
 }
-
+$rotateAmount: random(78)-26;
 #main-nav {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    transform: translate(-100%, 100%) rotate(random(78)-26+deg);
+    transform: translate(-100%, 100%) rotate($rotateAmount + deg);
     transition: all 0.4s cubic-bezier(.34,.01,.94,.15);
     background-color: #fe0;
     z-index: 10;
@@ -385,65 +385,85 @@ blockquote {
     background-clip: padding-box;
     overflow: auto;
     visibility: hidden;
+    text-align: center;
     &.shown {
         transform: translate(0, 0);
         box-shadow: 0 0 0 2.1em #fff;
         visibility: visible;
         transition: transform 0.6s cubic-bezier(.03,.89,.03,.99);
+        ul li {
+            opacity: 1;
+            transform: translateY(0);
+            
+            transition: all 1s 0.2s cubic-bezier(.03,.89,.03,.99);
+        }
     }
-    li {
-        list-style: none;
-        margin: 1em;
-        padding: 0.5em;
-        a {
-            color: #000;
-            font-weight: 900;
-            font-size: 2em;
-            text-decoration: none;
-            padding: 0.15em;
-            box-sizing: border-box;
-            box-shadow: none;
-            display: inline-block;
-            &:focus, nav li &:active {
-                box-shadow: -0.15em 0 rgba(0, 0, 0, 0.5);
-            }
-            &[data-current] {
-                color: #444;
-            }
-            &[data-current]:before, &[data-current]:after {
-                display: none;
-            }
-            &:after {
-                transform-origin:0% 50%;
-                margin-top:auto;
+    ul {
+        text-align: center;
+        display: inline-block;
+        li {
+            width: 100%;
+            list-style: none;
+            // margin: 1em;
+            padding: 0.5em;
+            overflow: visible;
+            opacity: 0;
+            transform: scaleY(1.4) translateY(100%);
+            transition: all 0.4s cubic-bezier(.34,.01,.94,.15);
+            a {
+                display: block;
+                color: #000;
+                font-weight: 900;
+                font-size: 2.3em;
+                text-decoration: none;
+                padding: 0.15em;
+                box-sizing: border-box;
+                box-shadow: none;
+                // display: inline-block;
+                &:focus, nav li &:active {
+                    box-shadow: -0.15em 0 rgba(0, 0, 0, 0.5);
+                }
+                &[data-current] {
+                    color: #444;
+                }
+                &[data-current]:before, &[data-current]:after {
+                    display: none;
+                }
+                &:after {
+                    transform-origin:0% 50%;
+                    margin-top:auto;
+                    height: 3px;
+                }
+    
+                &:before {
+                    content: '';
+                    display: block;
+                    color: hsla(0, 0%, 0%, 0);
+                    width: 100%;
+                    height: 3px;
+                    background-color: #333;
+                    transition: all 0.4s cubic-bezier(.71,.16,.16,.91);
+                    transform-origin:100% 50%;
+                }
+                &:hover:before, &:focus:before {
+                    transform: scale(0, 1);
+                }
             }
             &:before {
-                content: '';
-                display: block;
-                color: hsla(0, 0%, 0%, 0);
-                width: 100%;
-                height: .15em;
-                background-color: #333;
-                transition: all 0.4s cubic-bezier(.71,.16,.16,.91);
-                transform-origin:100% 50%;
+                display: none;
             }
-            &:hover:before, &:focus:before {
-                transform: scale(0, 1);
-            }
+            // a[data-current]::before {
+            //     content: '➔';
+            //     color: #000;
+            //     position: relative;
+            //     /*left: -1.2em;*/
+            //     width: 0;
+            // }
         }
-        &:before {
-            display: none;
+        h3 {
+            font-size: 5em;
+            text-decoration: underline;
         }
-        // a[data-current]::before {
-        //     content: '➔';
-        //     color: #000;
-        //     position: relative;
-        //     /*left: -1.2em;*/
-        //     width: 0;
-        // }
-    }
-    h3 {
-        font-size: 2em;
     }
 }
 @media (max-width: 40em), (max-height: 40em) {
