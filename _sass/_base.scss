@@ -172,16 +172,15 @@ a {
     transition: color 0.2s, box-shadow .2s ease, background 0.3s;
     display: inline-block;
     padding-bottom: 0;
-    // box-shadow: 0 0.15em 0 #333;
+    box-shadow: 0 0 0 0.15em transparent;
     &:active {
         color: #000;
         background: #999;
-        // box-shadow: 0 0.15em 0 #fe0;
         transition: color 0s, box-shadow 0s ease, background 0s;
     }
     &:hover, &:focus {
         background: #fe0;
-        // box-shadow: 0 20px 0 -13px #000;
+        box-shadow: 0 0 0 0.15em #fe0;
         transition: color 0.2s, box-shadow .2s ease, background 0.15s;
     }
     &:visited {
