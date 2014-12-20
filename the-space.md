@@ -19,7 +19,7 @@ Please contact us for corporate and institutional rates.
 
 A lot of work went into getting it ready, with a lot of help from some great people.  Special thanks to Colin Couch, Daniel Fischlin, Michael Kosir, Henry Muth, Gary Diggins, Tom Wolf, Jason Maraschiello, Gord Auld, Dan Beeson, Cathy Cripps, Rick Kowalczykowski, Eden Segal-Grossman, Doug Horne, Lynette Segal, Val Morse, Isabel Segal-Grossman (and probably others I’ve overlooked, sorry!).  Spiritual guidance by Joe Sorbara, Scott Thomson, Ron Gaskin, Daniel Fischlin, Peter Bradley and everyone who’s come out to shows or said “what a cool idea”.  Thank you!
 
-<span class='small dark-grey'>please note that while we do have rent and bills to pay and welcome cash at these rates, we are committed to making this space accessible, especially for innovative, experimental projects.  and we’re happy to find ways to avoid using our centralized currency wherever possible - if these rates are hard to manage, let’s talk.</span>
+*<span class='small dark-grey'>Please note that while we do have rent and bills to pay and welcome cash at these rates, we are committed to making this space accessible, especially for innovative, experimental projects, and we’re happy to find ways to avoid using our centralized currency wherever possible - if these rates are hard to manage, let’s talk.</span>
 
 * * *
 
