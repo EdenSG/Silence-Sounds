@@ -39,6 +39,10 @@ body {
 *:focus {
     outline: none;
 }
+hr {
+    margin: 3%;
+}
+
 
 /**
  * Utility styles
@@ -401,6 +405,9 @@ $rotateAmount: random(78)-26;
     ul {
         text-align: center;
         display: inline-block;
+        @media (max-width: 500px) {
+            margin-left:0;
+        }
         li {
             width: 100%;
             list-style: none;
