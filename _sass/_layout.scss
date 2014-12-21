@@ -199,4 +199,18 @@ main {
     hr {
         margin: 3%;
     }
+    a img {
+        margin: 10% 0;
+    }
+    a.no-hover {
+        border-radius: 5px;
+        border: 1px dashed transparent;
+        &:after {
+            display: none;
+        }
+        &:hover, &:focus {
+            background: transparent;
+            border-color: #222;
+        }
+    }
 }
