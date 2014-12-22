@@ -5,16 +5,79 @@ permalink: /calendar/
 <html>
 
 {% include head.html %}
+<style type="text/css">
+.loader {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    top: -512px;
+    z-index: -1;
+}
+.loader_ring {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    border: 11px solid #FFEE00;
+    border-radius: 128px;
+}
+.loader_ball_holder {
+    position: absolute;
+    width: 34px;
+    height: 128px;
+    left: 47px;
+    top: 0px;
+    -webkit-animation: loading_ball 1.3s linear infinite;
+    animation: loading_ball 1.3s linear infinite;
+}
+.loader_ball {
+    position: absolute;
+    left: 0px;
+    top: -30px;
+    width: 51px;
+    height: 51px;
+    background: #000000;
+    border-radius: 43px;
+}
+@-webkit-keyframes loading_ball {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading_ball {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+</style>
 
 <body>
 
     {% include silence-title.html %} {% include main-nav.html %}
-
-    <div style="text-align:center;margin: 4% 0">
-        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=silence.guelph%40gmail.com&amp;color=%23333333&amp;ctz=America%2FToronto" style="border-width:0;width:100%;height:600px;max-width:40em;margin:0 auto" frameborder="0" scrolling="no"></iframe>
+    <div style="text-align:center;margin: 4% 0;position:relative;z-index:1">
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=silence.guelph%40gmail.com&amp;color=%23333333&amp;ctz=America%2FToronto" style="border-width:0;width:100%;height:600px;max-width:40em;margin:0 auto;" frameborder="0" scrolling="no"></iframe>
+        <div class="loader center">
+            <div class="loader_ring">
+                <div class="loader_ball_holder">
+                    <div class="loader_ball">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
 <script type="text/javascript" src="/js/main.min.js"></script>
 
 </html>
+
+
