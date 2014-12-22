@@ -167,7 +167,8 @@ module.exports = function(grunt) {
                     server: {
                         baseDir: "_site"
                     },
-                    notify: false
+                    notify: false,
+                    ghostMode: false
                 }
             }
         }
