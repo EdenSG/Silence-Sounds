@@ -43,6 +43,31 @@ hr {
     margin: 3%;
 }
 
+.brainsalt {
+    img {
+        margin: 8% auto;
+        display: block;
+    }
+    &:after {
+        content: 'Your brain has been salted!';
+        display: block;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        top: 100%;
+        transition: all 0.3s ease;
+        transform: translateY(0);
+        visibility: hidden;
+        margin: 2% auto;
+        padding: 2% 0;
+        background: #fff;
+        box-shadow: 0 0 0 12px rgba(255,255,255,0.6);
+    }
+    &:active:after, &:focus:after {
+        transform: translateY(-160%);
+        visibility: visible;
+    }
+}
 
 /**
  * Utility styles
@@ -417,6 +442,7 @@ $rotateAmount: random(78)-26;
             opacity: 0;
             transform: scaleY(1.4) translateY(100%);
             transition: all 0.4s cubic-bezier(.34,.01,.94,.15);
+            -webkit-font-smoothing: antialiased;
             a {
                 display: block;
                 color: #000;
