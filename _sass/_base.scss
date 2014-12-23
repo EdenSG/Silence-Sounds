@@ -224,8 +224,9 @@ a {
         height: .15em;
         margin-top: -0.3em;
         background-color: #333;
+        will-change: transform;
         transition: all 0.4s cubic-bezier(0.95,0.26,0.07,0.93);
-        transform: scale(0.99, 1);
+        transform: scale(1, 1);
     }
     &:hover:after, &:focus:after {
         transform: scale(0, 1);
@@ -286,6 +287,7 @@ blockquote {
     }
     &:hover > .line {
         box-shadow: 0 0 0 2px #000;
+        will-change: transform;
     }
     @media (max-width: 30rem) {
         &.close {
@@ -393,6 +395,9 @@ blockquote {
     100% {
         transform: translate(0, 0) rotate(0);
     }
+}
+.nav-trigger:hover ~ #main-nav {
+    will-change: transform;
 }
 $rotateAmount: random(78)-26;
 #main-nav {
