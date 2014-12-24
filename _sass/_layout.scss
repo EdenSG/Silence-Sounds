@@ -44,6 +44,7 @@ body {
         }
     }
 }
+
 .center {
     text-align: center;
     margin: 0 auto;
@@ -67,67 +68,64 @@ body {
 
 /**
  * Site footer
- */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-}
+//  */
+// .site-footer {
+//     border-top: 1px solid $grey-color-light;
+//     padding: $spacing-unit 0;
+// }
 
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
+// .footer-heading {
+//     font-size: 18px;
+//     margin-bottom: $spacing-unit / 2;
+// }
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
+// .contact-list,
+// .social-media-list {
+//     list-style: none;
+//     margin-left: 0;
+// }
 
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
+// .footer-col-wrapper {
+//     font-size: 15px;
+//     color: $grey-color;
+//     margin-left: -$spacing-unit / 2;
+//     @extend %clearfix;
+// }
 
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
+// .footer-col {
+//     float: left;
+//     margin-bottom: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+// }
 
-.footer-col-1 {
-    width: calc(35% - (#{$spacing-unit} / 2));
-}
+// .footer-col-1 {
+//     width: calc(35% - (#{#{$spacing-unit}} / 2));
+// }
 
-.footer-col-2 {
-    width: calc(20% - (#{$spacing-unit} / 2));
-}
+// .footer-col-2 {
+//     width: calc(20% - (#{#{$spacing-unit}} / 2));
+// }
 
-.footer-col-3 {
-    width: calc(45% - (#{$spacing-unit} / 2));
-}
+// .footer-col-3 {
+//     width: calc(45% - (#{#{$spacing-unit}} / 2));
+// }
 
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: calc(50% - (#{$spacing-unit} / 2));
-    }
+// @include media-query($on-laptop) {
+//     .footer-col-1,
+//     .footer-col-2 {
+//         width: calc(50% - (#{#{$spacing-unit}} / 2));
+//     }
+//     .footer-col-3 {
+//         width: calc(100% - (#{#{$spacing-unit}} / 2));
+//     }
+// }
 
-    .footer-col-3 {
-        width: calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
+// @include media-query($on-palm) {
+//     .footer-col {
+//         float: none;
+//         width: calc(100% - (#{#{$spacing-unit}} / 2));
+//     }
+// }
 
 /**
  * Page content
@@ -139,7 +137,6 @@ main {
     padding: 1rem;
     width: 80%;
 }
-
 
 /*
  * Events page
@@ -159,7 +156,6 @@ main {
     }
 }
 
-
 /**
  * Posts
  */
@@ -171,7 +167,6 @@ main {
     font-size: 2.5rem;
     letter-spacing: -1px;
     line-height: 1;
-
     @include media-query($on-laptop) {
         font-size: 36px;
     }
@@ -179,22 +174,18 @@ main {
 
 .post-content {
     margin-bottom: $spacing-unit;
-
     h1 {
         font-size: 2rem;
     }
-
     h2 {
         font-size: 1.5rem;
     }
-
     h3 {
         font-size: 1.3rem;
     }
-
     h4 {
         font-size: 1.2rem;
-        color:#555;
+        color: #555;
     }
     a img {
         margin: 10% 0;
