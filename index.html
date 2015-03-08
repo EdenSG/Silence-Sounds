@@ -7,9 +7,9 @@ layout: default
     <script type="text/javascript">
     window.location.replace(function(){
     	if (window.location.pathname.indexOf("index.html", window.location.pathname.length - "index.html".length) !== -1) {
-    		return window.location.href.slice(0, -10);
+    		return window.location.href.slice(0, -10) + "about/";
     	} else {
-    		return window.location.href;
+    		return window.location.href + "about/";
     	}
     });
     </script>
