@@ -5,13 +5,11 @@ layout: default
 <div class="home">
 
     <script type="text/javascript">
-    window.location.replace(function(){
-    	if (window.location.pathname.indexOf("index.html", window.location.pathname.length - "index.html".length) !== -1) {
-    		return window.location.href.slice(0, -10) + "about/";
-    	} else {
-    		return window.location.href + "about/";
-    	}
-    });
+    if (window.location.pathname.indexOf("index.html", window.location.pathname.length - "index.html".length) !== -1) {
+    	window.location.replace(window.location.href.slice(0, -10) + "about/");
+    } else {
+    	window.location.replace(window.location.href + "about/");
+    }
     </script>
 
 </div>
