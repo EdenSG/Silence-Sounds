@@ -152,7 +152,7 @@ module.exports = function(grunt) {
 
         shell: {
             jekyll: {
-                command: "jekyll build"
+                command: "jekyll build --incremental"
             }
         },
 
