@@ -133,7 +133,7 @@ module.exports = function(grunt) {
         htmlmin: {
             main: {
                 options: { // Target options
-                    removeComments: false,
+                    removeComments: true,
                     collapseWhitespace: true,
                     minifyJS: true,
                     minifyCSS: true
